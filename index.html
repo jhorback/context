@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Context.js : context.js - JavaScript dependency injection." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Context.js</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jhorback/context.js">View on GitHub</a>
+
+          <h1 id="project_title">Context.js</h1>
+          <h2 id="project_tagline">context.js - JavaScript dependency injection.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jhorback/context.js/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jhorback/context.js/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="contextjs" class="anchor" href="#contextjs"><span class="octicon octicon-link"></span></a>context.js</h1>
+
+<p>An IOC container.</p>
+
+<h2>
+<a name="registername-value-type" class="anchor" href="#registername-value-type"><span class="octicon octicon-link"></span></a>register(name, value, type)</h2>
+
+<p>Registers an object with the container.
+The type is only needed if the value is a plain function not to be used 
+as a constructor function (created with the new keyword).
+Valid types are "object", "constructor", "function".</p>
+
+<h2>
+<a name="registry" class="anchor" href="#registry"><span class="octicon octicon-link"></span></a>registry</h2>
+
+<p>A JavaScript object containing references to all registered objects.</p>
+
+<h2>
+<a name="get" class="anchor" href="#get"><span class="octicon octicon-link"></span></a>get</h2>
+
+<p><code>get(name)</code>
+Retrieves the dependency.
+If the dependency is a constructor it will inject and return then 'newed' object as a singleton.</p>
+
+<p>If a second argument passed is <em>true</em> it will retrieve the <em>raw</em> registry value.
+So in the case of a constructor function it will return the un-'newed' object.</p>
+
+<h2>
+<a name="callmethod-args-context" class="anchor" href="#callmethod-args-context"><span class="octicon octicon-link"></span></a>call(method, args, context)</h2>
+
+<p>A utility method for satisfying the dependencies of a method directly.
+The context will be applied to the method call -&gt; 'this'</p>
+
+<h2>
+<a name="instantiateconstructor-args" class="anchor" href="#instantiateconstructor-args"><span class="octicon octicon-link"></span></a>instantiate(constructor, args)</h2>
+
+<p>Calls the constructor which can also be the name</p>
+
+<p>of a registered dependency.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Context.js maintained by <a href="https://github.com/jhorback">jhorback</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
